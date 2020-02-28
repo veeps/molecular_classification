@@ -14,7 +14,6 @@ There are examples of drug treatments that were originally developed to treat ca
 With the onset of image processing techniques, I wanted to explore the possibility of predicting promising new drug treatments based on their molecular structures.
 
 
-
 ---
 
 ## What's my MVP here?
@@ -71,16 +70,15 @@ From this distribution, we can see that the molecular weights are distinct for e
 Hydrogen bonds are a special type of attraction where one hydrogen atom bonds to a very electronegative atom in vicinity of another electronegative atom with a lone pair of electrons [(source).](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_\(Physical_and_Theoretical_Chemistry\)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Hydrogen_Bonding)
 
 __Hydrogen bond acceptors__ are typically electronegative atoms that have a lone pair of electrons.
-![Hydrogen Acceptors](./plots/hbond_acceptors.png)
-
-From this boxplot, we see the Antineoplastic drugs have generally more H bond acceptors per molecule. The distribution ranges for each class.
-
 
 __Hydrogen bond donors__ are hydrogens that are attached to one of those electronegative elements(like Oxygen or Nitrogen). The positive charge that this hydrogen acquires allows it to bond to the nearby electronegative atom.
 
-![Hydrogen Donors](./plots/hbond_donors.png)
+<p float="centered">
+  <img src="./plots/hbond_acceptors.png" width="45%" />
+  <img src="./plots/hbond_donors.png" width="45%" />
+</p>
 
-From this bobxplot, we see the Antineoplastic drugs also have generally more H bond donors per molecule. The distribution ranges for each class.
+From these boxplot charts, we see the Antineoplastic drugs have generally more H bond acceptors and H bond donors per molecule. The distribution ranges for each class.
 
 ---
 
