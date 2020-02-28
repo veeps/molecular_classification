@@ -74,8 +74,9 @@ __Hydrogen bond acceptors__ are typically electronegative atoms that have a lone
 __Hydrogen bond donors__ are hydrogens that are attached to one of those electronegative elements(like Oxygen or Nitrogen). The positive charge that this hydrogen acquires allows it to bond to the nearby electronegative atom.
 
 <p float="centered">
-  <img src="./plots/hbond_acceptors.png" width="46%" />
-  <img src="./plots/hbond_donors.png" width="46%" />
+  <img src="./plots/hbond_acceptors.png" width="47%" />
+
+  <img src="./plots/hbond_donors.png" width="47%" />
 </p>
 
 From these boxplot charts, we see the Antineoplastic drugs have generally more H bond acceptors and H bond donors per molecule. The distribution ranges for each class.
