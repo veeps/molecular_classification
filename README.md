@@ -51,7 +51,8 @@ Here are the available chemicals from the original dataset:
 
 In order to have relatively balanced classes, I am focusing the classification model on the three biggest classes: Antineoplastic, CNS, and Cardio.
 
-![Number of chemicals](./plots/number_chemicals.png)
+<img src="./plots/number_chemicals.png" alt="Number of chemicals" width="75%"/>
+
 
 The images are split into my train set [here](./train_data) and test set [here](./test_data).
 
@@ -62,7 +63,7 @@ The images are split into my train set [here](./train_data) and test set [here](
 Exploring some of the physical differences among the classes.
 
 #### Molecular Weights
-![Molecular weights](./plots/molecular_weights.png)
+<img src="./plots/molecular_weights.png" alt="Molecular weights" width="75%"/>
 
 From this distribution, we can see that the molecular weights are distinct for each class. CNS molecules, in general, have a higher molecular weight than the other classes.
 
@@ -70,10 +71,13 @@ From this distribution, we can see that the molecular weights are distinct for e
 Hydrogen bonds are a special type of attraction where one hydrogen atom bonds to a very electronegative atom in vicinity of another electronegative atom with a lone pair of electrons [(source).](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_\(Physical_and_Theoretical_Chemistry\)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Hydrogen_Bonding)
 
 __Hydrogen bond acceptors__ are typically electronegative atoms that have a lone pair of electrons.
-![Hydrogen bond acceptors](./plots/hbond_acceptors.png)
+
+<img src="./plots/hbond_acceptors.png" alt="Hydrogen bond acceptors" width="75%"/>
+
 
 __Hydrogen bond donors__ are hydrogens that are attached to one of those electronegative elements(like Oxygen or Nitrogen). The positive charge that this hydrogen acquires allows it to bond to the nearby electronegative atom.
-![Hydrogen bond donors](./plots/hbond_donors.png)
+
+<img src="./plots/hbond_donors.png" alt="Hydrogen bond donors" width="75%"/>
 
 
 From these boxplot charts, we see the Antineoplastic drugs have generally more H bond acceptors and H bond donors per molecule. The distribution ranges for each class.
