@@ -23,26 +23,65 @@ Given the data provided by Meyer, et. al, I want to explore classifying molecule
 
 1. Chemical molecular structure (provided as images). Ex:
 ![Chem structure](./test_data/cns/753.png)
-2. Chemical SMILES (provided as a string of text). Ex:
-
-  __CCCCCCC(C)(C)c1ccc(C2CC(O)CCC2CCCO)c(O)c1__
+2. Chemical properties
 
 I want to compare which model is more accurate at predicting the drug therapy class. If molecular structures perform better, then that implies there is information about the geometric structure of chemicals that is more representative of its properties.
 
 ---
 ## Data
 
-For now, I have copied a subset of the data provided by Meyer, et. al to perform a binary (antineoplastic, or cns) classification model.
+For now, I have copied a subset of the data provided by Meyer, et. al to perform a binary (antineoplastic, or cns) classification model [here](./data/CID_properties_nr.csv).
+
+Here are the available chemicals from the original dataset:
+
+
+|Drug Class|Number of Chemicals|
+|:---|:---|
+|antineoplastic|1174|
+|cns|1141|
+|cardio|787|
+|antiinflammatory|372|
+|hematologic|268|
+|gastrointestinal|255|
+|lipidregulating|164|
+|reproductivecontrol|148|
+|antiinfective|140|
+|dermatologic|108|
+|respiratorysystem|100|
+|urological|22|
+
+In order to have relatively balanced classes, I am focusing the classification model on the three biggest classes: Antineoplastic, CNS, and Cardio.
+
+![Number of chemicals](./plots/number_chemicals.png)
 
 The images are split into my train set [here](./train_data) and test set [here](./test_data).
 
-I also want to explore this csv that include more information about the chemical properties:
+---
 
--[CID_properties.csv](./data/CID_properties.csv):
-Includes information  on feature hydrophobe count 3D, H bond acceptor count and H bond donor count.
+## EDA
+
+Exploring some of the physical differences among the classes.
+
+#### Molecular Weights
+![Molecular weights](./plots/molecular_weights.png)
+
+From this distribution, we can see that the molecular weights are distinct for each class. CNS molecules, in general, have a higher molecular weight than the other classes.
+
+#### Hydrogen Bonds
+Hydrogen bonds are a special type of attraction where one hydrogen atom bonds to a very electronegative atom in vicinity of another electronegative atom with a lone pair of electrons [(source).](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_\(Physical_and_Theoretical_Chemistry\)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Hydrogen_Bonding)
+
+__Hydrogen bond acceptors__ are typically electronegative atoms that have a lone pair of electrons.
+![Hydrogen Acceptors](./plots/hbond_acceptors.png)
+
+From this boxplot, we see the Antineoplastic drugs have generally more H bond acceptors per molecule. The distribution ranges for each class.
+
+
+__Hydrogen bond donors__ are hydrogens that are attached to one of those electronegative elements(like Oxygen or Nitrogen). The positive charge that this hydrogen acquires allows it to bond to the nearby electronegative atom.
+
+![Hydrogen Donors](./plots/hbond_donors.png)
+
+From this bobxplot, we see the Antineoplastic drugs also have generally more H bond donors per molecule. The distribution ranges for each class.
 
 ---
 
 ## Modeling
-
-Currently I'm following this [TensorFlow tutorial](https://github.com/tensorflow/docs) for my binary classification. I will expand on this for multiclass classification.
