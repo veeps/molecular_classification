@@ -62,7 +62,7 @@ The images are split into my train set [here](./train_data) and test set [here](
 Exploring some of the physical differences among the classes.
 
 #### Molecular Weights
-![Molecular weights](./plots/molecular_weights.png)
+![Molecular weights](./plots/molecular_weights.png, width = 50%)
 
 From this distribution, we can see that the molecular weights are distinct for each class. CNS molecules, in general, have a higher molecular weight than the other classes.
 
