@@ -90,7 +90,7 @@ From these boxplot charts, we see the Antineoplastic drugs have generally more H
 |:---|:---|:---|
 |SVC|Chemical properties (numeric)|0.53|
 |CNN|2D Chemical structures (images)|0.61|
-|RNN|1D Chemical structures (strings)|0.64|
+|RNN|1D Chemical structures (strings)|0.66|
 
 __[SVC Model](./code/003_SVC.ipynb)__:
 To get a baseline score of how my CNN and RNN models perform, I first built a multi-class SVC model using chemical properties as my features. Chemical properties included: Hydrogen bond acceptor count, hydrogen bond donor count, molecular weight, and xlogp.
@@ -107,8 +107,26 @@ My best performing CNN model utilized VGG16, with a  validation accuracy score o
 Using the VGG16 model helped adjust for the overfit compared to my custom built CNN models.
 
 __[RNN Model](./code/003_rnn.ipynb)__:
-Using SMILES data of my chemical structures, I ran a RNN model. First, I
+Using SMILES data of my chemical structures, I ran a RNN model. I used the Keras built in Tokenizer by to preprocess my text by character count .
 
-My best performing CNN model utilized VGG16, with a  validation accuracy score of 0.61.
+The validation accuracy score for my RNN model was 0.66.
 
 ![RNN_accuracy](./plots/accuracy_loss_rnn.png)
+
+This model is overfit to my training data. I can adjust for overfitting by either getting more training data, or adding more hidden layers.
+
+
+---
+
+## Evaluation
+
+Both my CNN and RNN models were better at predicting drug class compared to using physical properties alone.
+
+Let's compare how the CNN and RNN models are predicting each class.
+<p float="centered">
+  <img src="./plots/confusion_matrix_cnn.png" width="45%" />
+  <img src="./plots/confusion_matrix_rnn.png
+" width="45%" />
+</p>
+
+Looking at how the two models generate predictions for drug types, the RNN model is better at classifying CNS drug types compared to the CNN model. This tells me that there might be more distinct features in SMILES data for CNS drug types compared to the other types.
