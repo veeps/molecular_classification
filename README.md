@@ -23,7 +23,8 @@ Given the data provided by Meyer, et. al, I want to explore classifying molecule
 1. Chemical molecular structure (provided as images). Ex:
 ![Chem structure](./test_data/cns/753.png)
 2. SMILES (provided as text strings). Ex:
-## Brc1c(NC2=NCCN2)ccc2nccnc12
+##    Brc1c(NC2=NCCN2)ccc2nccnc12
+
 
 I want to compare which model is more accurate at predicting the drug therapy class. If molecular structures perform better, then that implies there is information about the geometric structure of chemicals that is more representative of its properties.
 
