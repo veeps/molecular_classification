@@ -86,3 +86,29 @@ From these boxplot charts, we see the Antineoplastic drugs have generally more H
 ---
 
 ## Modeling
+|Model|Data Type|Accuracy Score|
+|:---|:---|:---|
+|SVC|Chemical properties (numeric)|0.53|
+|CNN|2D Chemical structures (images)|0.61|
+|RNN|1D Chemical structures (strings)|0.64|
+
+__[SVC Model](./code/003_SVC.ipynb)__:
+To get a baseline score of how my CNN and RNN models perform, I first built a multi-class SVC model using chemical properties as my features. Chemical properties included: Hydrogen bond acceptor count, hydrogen bond donor count, molecular weight, and xlogp.
+
+The validation accuracy score for my SVC model was 0.53.
+
+__[CNN Model](./code/003_cnn_multiclass.ipynb)__:
+Using image data of my chemical structures, I ran multiple CNN models. Two were custom CNN models, and one used a pretrained model VGG16.
+
+My best performing CNN model utilized VGG16, with a  validation accuracy score of 0.61. This leads me to believe that having a bigger training data set helps with the performance of the model.
+
+![CNN_accuracy](./plots/accuracy_loss_cnn_vgg16.png)
+
+Using the VGG16 model helped adjust for the overfit compared to my custom built CNN models.
+
+__[RNN Model](./code/003_rnn.ipynb)__:
+Using SMILES data of my chemical structures, I ran a RNN model. First, I
+
+My best performing CNN model utilized VGG16, with a  validation accuracy score of 0.61.
+
+![RNN_accuracy](./plots/accuracy_loss_rnn.png)
