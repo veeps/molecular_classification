@@ -125,8 +125,7 @@ Both my CNN and RNN models were better at predicting drug class compared to usin
 Let's compare how the CNN and RNN models are predicting each class.
 <p float="centered">
   <img src="./plots/confusion_matrix_cnn.png" width="45%" />
-  <img src="./plots/confusion_matrix_rnn.png
-" width="45%" />
+  <img src="./plots/confusion_matrix_rnn.png" width="45%" />
 </p>
 
 Looking at how the two models generate predictions for drug types, the RNN model is better at classifying CNS drug types compared to the CNN model. This tells me that there might be more distinct features in SMILES data for CNS drug types compared to the other types.
