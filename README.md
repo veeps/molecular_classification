@@ -2,7 +2,7 @@
 *Acknowledgments: This project is inspired by the work done in the article, [Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests](https://pubs.acs.org/doi/10.1021/acs.jcim.9b00236) by Jesse G Meyer, Shengchao Liu, Ian J Miller, Joshua J Coon, Anthony Gitter Journal of Chemical Information and Modeling. 2019, 59(10) 4438-4449. Their github and data sources can be found [here.](https://github.com/jgmeyerucsd/drug-class)*
 
 ## Executive Summary
-Using images of molecular chemical structures, I built a multi-class classification model to predict the drug treatment class of the chemical.
+Using two types of molecular structure representation of chemicals: 2D molecular structure (image data) and SMILES (text strings), I compare the performance of a Convolutional Neural Network (CNN) and a Recurrent Neural Network (RNN) on classifying the chemicals by their MeSH therapeutic drug class.
 
 ---
 
@@ -22,7 +22,8 @@ Given the data provided by Meyer, et. al, I want to explore classifying molecule
 
 1. Chemical molecular structure (provided as images). Ex:
 ![Chem structure](./test_data/cns/753.png)
-2. Chemical properties
+2. SMILES (provided as text strings). Ex:
+## Brc1c(NC2=NCCN2)ccc2nccnc12
 
 I want to compare which model is more accurate at predicting the drug therapy class. If molecular structures perform better, then that implies there is information about the geometric structure of chemicals that is more representative of its properties.
 

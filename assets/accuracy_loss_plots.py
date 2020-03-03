@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
 
-epochs = 20
 
 # function to plot accuracy and loss plots
-def plot_accuracy_loss(model_history):
+def plot_accuracy_loss(model_history, epochs):
     acc = model_history.history['accuracy']
     val_acc = model_history.history['val_accuracy']
 
