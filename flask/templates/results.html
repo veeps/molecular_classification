@@ -3,10 +3,26 @@
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
+<style>
+h2 {
+  font-size: 2em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+h3 {
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-top: 30px;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #444;
+}
+</style>
 <body>
-<h2>Your compound is most likely a {{prediction}} type of drug.</h2>
+<h2>Your compound most likely belongs to the {{prediction}} class of drugs.</h2>
 <div align="center">
-	<h3>We can predict this with a 66% accuracy</h3>
+	<h3>We can predict this with a 66% accuracy ¯\_(ツ)_/¯</h3>
 	<p><img src="{{imgpath}}"></img>
 </div>
 </body>

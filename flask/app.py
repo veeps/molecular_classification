@@ -58,11 +58,11 @@ def home():
 
                 prediction = model.predict_classes(img_tensor)
                 if prediction[0] == 0:
-                    prediction = "Antineoplastic"
+                    prediction = "antineoplastic"
                 elif prediction[0] == 1:
                     prediction = "CNS"
                 elif preturn[0] == 1:
-                    prediction = "Cardio"
+                    prediction = "cardio"
 
                 return render_template("/results.html", prediction=prediction, imgpath = img_path)
 
