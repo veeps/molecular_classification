@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Your Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-<h2> Your compound is a {{prediction}}<h2>
-<p><img src="{{imgpath}}"></img>
+<h2>Your compound is most likely a {{prediction}} type of drug.</h2>
+<div align="center">
+	<h3>We can predict this with a 66% accuracy</h3>
+	<p><img src="{{imgpath}}"></img>
+</div>
 </body>
 </html>

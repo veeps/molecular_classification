@@ -1,2 +1,6 @@
 assets/train_features_cnn.pkl
-validation_features_cnn.pkl
+assets/validation_features_cnn.pkl
+assets/train_labels_cnn.pkl
+assets/validation_labels_cnn.pkl
+assets/model_cnn_custom.h5
+flask/assets/model_cnn_custom.h5
