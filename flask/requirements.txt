@@ -1,0 +1,9 @@
+backports.os==0.1.1
+Flask====1.1.1
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
+numpy==1.17.4
+pandas==0.25.3
+pickleshare==0.7.5
+tensorflow==2.1.0
+Werkzeug==0.16.0
