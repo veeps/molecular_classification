@@ -145,3 +145,16 @@ Looking at how the two models generate predictions for drug types, the RNN model
 One of the challenges I came across while working with the SMILES structure type is handling two-letter elements. For example, Bromine is abbreviated as Br. Since my tokenizer splits on the character level, it gets a value for the "B" and a separate value for "r".
 
 As I continue to work on this project, I would like to figure out how to customize the tokenizer to treat two-letter elements as one unit.
+
+---
+
+## Flask app
+![Flask app demo](./assets/flask_app.gif)
+
+Here's a demo of the Flask app that takes in user-uploaded images and predicts the classification for drug type. This could be a useful tool for students as they create new chemicals to predict how it might be used as a drug therapy.
+
+Code for the Flask app can be found here: https://github.com/veeps/molecular_classification_flask
+
+When deploying this app to Heroku, I ran into memory issues since my slug size is 512MB (the limit is 500MB). I attribute the large slug size to including TensorFlow as a dependency library, which is 421.8 MB.
+
+Next steps for this project would be to deploy to Heroku by using TensorFlow Serving, which I imagine will help reduce my slug size.
