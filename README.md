@@ -144,7 +144,7 @@ Looking at how the two models generate predictions for drug types, the RNN model
 
 One of the challenges I came across while working with the SMILES structure type is handling two-letter elements. For example, Bromine is abbreviated as Br. Since my tokenizer splits on the character level, it gets a value for the "B" and a separate value for "r".
 
-As I continue to work on this project, I would like to figure out how to customize the tokenizer to treat two-letter elements as one unit.
+As I continue to work on this project, I would like to figure out how to customize the tokenizer to treat two-letter elements as one unit. There is a github repository LSTM_chem that creates a custom tokenizer for SMILES: https://github.com/topazape/LSTM_Chem
 
 ---
 
