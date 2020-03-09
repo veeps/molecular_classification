@@ -7,33 +7,32 @@ Using two types of molecular structure representation of chemicals: 2D molecular
 ---
 
 ## Problem Statement
-Neglected diseases is a term used to describe diseases that affect a niche population with little to no treatments available. The current drug research & development (R&D) system is long and costly, which does not incentivize finding new drug treatments for neglected diseases.
+Neglected diseases is a term used to describe diseases that affect a niche population with little to no treatments available. The current drug research & development (R&D) system is long and costly. The pipeline from discovery to market requires lots of investment early on, which does not incentivize finding new drug treatments for neglected diseases.
 
 There are examples of drug treatments that were originally developed to treat cancer which were later "shelved," or not used, when proven to be ineffective for treating cancer. Some years later, researchers will come across this drug treatment and discover that it's actually effective in treating another disease, like a neglected disease.
 
-With the onset of image processing techniques, I wanted to explore the possibility of predicting promising new drug treatments based on their molecular structures.
+What if we could improve the R&D process by reducing redundancy, and screen for potential other therapeutic uses in parallel? With the onset of image processing techniques, I wanted to explore the possibility of predicting drug classes on their molecular structures alone?
 
 
 ---
 
-## What's my MVP here?
+## Hypothesis
+I want to compare the accuracy of a Convolutional Neural Network (CNN) to a Recurrent Neural Network (RNN) at classifying drug classes. My hypothesis is that a CNN with 2D molecular structures will be better at predicting drug class than a RNN with 1D molecular structures as string text.
 
-Given the data provided by Meyer, et. al, I want to explore classifying molecules based on:
+Given the data provided by Meyer, et. al, I will explore classifying molecules based on:
 
-1. Chemical molecular structure (provided as images). Ex:
+1. 2D Molecular structure (provided as images). Ex:
 ![Chem structure](./test_data/cns/753.png)
-2. SMILES (provided as text strings). Ex:
+2. 1D Molecular structure SMILES (provided as text strings). Ex:
 ##    Brc1c(NC2=NCCN2)ccc2nccnc12
 
-
-I want to compare which model is more accurate at predicting the drug therapy class. If molecular structures perform better, then that implies there is information about the geometric structure of chemicals that is more representative of its properties.
 
 ---
 ## Data
 
-For now, I have copied a subset of the data provided by Meyer, et. al to perform a binary (antineoplastic, or cns) classification model [here](./data/CID_properties_nr.csv).
+For now, I have copied a subset of the data provided by Meyer, et. al to perform a multiclass (antineoplastic, , cardio or CNS) classification model [here](./data/CID_properties_nr.csv).
 
-Here are the available chemicals from the original dataset:
+Medical Subject Heading, or MeSH, is a catalogue that includes drug classes for therapeutic drugs. These drug classes will be used for my model. Here are the available chemicals from the original dataset:
 
 
 |Drug Class|Number of Chemicals|
