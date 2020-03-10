@@ -95,7 +95,7 @@ If I were to randomly assign a drug class to each of my chemicals, my baseline a
 |Model|Data Type|Accuracy Score|
 |:---|:---|:---|
 |SVC|Chemical properties (numeric)|0.53|
-|CNN|2D Chemical structures (images)|0.61|
+|CNN|2D Chemical structures (images)|0.65|
 |RNN|1D Chemical structures (strings)|0.66|
 
 __[SVC Model](./code/003_SVC.ipynb)__:
