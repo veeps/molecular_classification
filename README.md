@@ -61,7 +61,7 @@ The images are split into my train set [here](./train_data) and test set [here](
 
 ## EDA
 
-Exploring some of the physical differences among the classes.
+Exploring some of the physical differences among the classes. Notebook for EDA can be found [here](./code/001_EDA.ipynb).
 
 #### Molecular Weights
 <img src="./plots/molecular_weights.png" alt="Molecular weights" width="75%"/>
@@ -98,7 +98,7 @@ If I were to randomly assign a drug class to each of my chemicals, my baseline a
 |CNN|2D Chemical structures (images)|0.65|
 |RNN|1D Chemical structures (strings)|0.66|
 
-__[SVC Model](./code/003_SVC.ipynb)__:
+__[SVC Model](./code/002_SVC.ipynb)__:
 I first built a multi-class SVC model using chemical properties alone (does not include any structural data) to use as a comparison to my CNN and RNN models. My hypothesis is that structural data provides more information on the drug class type than the chemical properties alone. Chemical properties included: Hydrogen bond acceptor count, hydrogen bond donor count, molecular weight, and xlogp.
 
 The validation accuracy score for my SVC model was 0.53.
@@ -112,7 +112,7 @@ My best performing CNN model utilized VGG16, with a  validation accuracy score o
 
 Using the VGG16 model helped adjust for the overfit compared to my custom built CNN models.
 
-__[RNN Model](./code/003_rnn.ipynb)__:
+__[RNN Model](./code/004_rnn.ipynb)__:
 Using SMILES data of my chemical structures, I ran a RNN model. I used the Keras built in Tokenizer by to preprocess my text by character count.
 
 The validation accuracy score for my RNN model was 0.66.
@@ -124,7 +124,7 @@ This model is overfit to my training data. I can adjust for overfitting by eithe
 
 ---
 
-## Evaluation
+## Conclusion
 
 Both my CNN and RNN models were better at predicting drug class compared to using physical properties alone.
 
@@ -142,6 +142,10 @@ Looking at how the two models generate predictions for drug types, the RNN model
 ## Limitations
 
 One of the challenges I came across while working with the SMILES structure type is handling two-letter elements. For example, Bromine is abbreviated as Br. Since my tokenizer splits on the character level, it gets a value for the "B" and a separate value for "r".
+
+The two letter elements included in this data set are: 'Al', 'Cl', 'Sc', 'As', 'Se', 'Br', 'Cn'.
+
+I was able to include the most common two letter element, Cl, by adding it in as an "oov_tokens" argument in the Keras tokenizer. Since this argument only takes strings, and not a list, I was unable to pass in the rest of the list into the argument.
 
 As I continue to work on this project, I would like to figure out how to customize the tokenizer to treat two-letter elements as one unit. There is a github repository LSTM_chem that creates a custom tokenizer for SMILES: https://github.com/topazape/LSTM_Chem
 
