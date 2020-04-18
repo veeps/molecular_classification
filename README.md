@@ -15,6 +15,7 @@ There are examples of drug treatments that were originally developed to treat ca
 
 What if we could improve the R&D process by reducing redundancy, and screen for potential other therapeutic uses in parallel? With the onset of image processing techniques, I wanted to explore the possibility of predicting drug classes on their molecular structures alone?
 
+![Molecular Classification](./assets/molecular_classification.gif)
 ---
 
 ## Hypothesis
@@ -22,11 +23,11 @@ I want to compare the accuracy of a Convolutional Neural Network (CNN) to a Recu
 
 Given the data provided by Meyer, et. al, I will explore classifying molecules based on:
 
-1. 2D Molecular structure (provided as images). Ex:
-![Chem structure](./test_data/cns/753.png)
-2. 1D Molecular structure SMILES (provided as text strings). Ex:
-##    Brc1c(NC2=NCCN2)ccc2nccnc12
+1. Chemical physical properties (numeric).
+2. 2D Molecular structure (provided as images).
+3. 1D Molecular structure SMILES (provided as text strings). 
 
+![Data types](./assets/data_types.png)
 
 ---
 ## Data
