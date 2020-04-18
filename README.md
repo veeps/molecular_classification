@@ -4,6 +4,8 @@
 ## Executive Summary
 Using two types of molecular structure representation of chemicals: 2D molecular structure (image data) and SMILES (text strings), I compare the performance of a Convolutional Neural Network (CNN) and a Recurrent Neural Network (RNN) on classifying the chemicals by their MeSH therapeutic drug class.
 
+![Molecular Classification](./assets/molecular_classification.gif)
+
 Slides to my presentation can be found [here](https://docs.google.com/presentation/d/1gzCQuby8ubIyHQpXOPEvuLesJbQCGlAnyCm4rKeF7nE/edit?usp=sharing).
 
 ---
@@ -15,7 +17,6 @@ There are examples of drug treatments that were originally developed to treat ca
 
 What if we could improve the R&D process by reducing redundancy, and screen for potential other therapeutic uses in parallel? With the onset of image processing techniques, I wanted to explore the possibility of predicting drug classes on their molecular structures alone?
 
-![Molecular Classification](./assets/molecular_classification.gif)
 ---
 
 ## Hypothesis
